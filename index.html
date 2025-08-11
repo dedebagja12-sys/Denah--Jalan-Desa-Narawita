@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +45,8 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#peta-desa">Peta Desa</a></li>
         <li class="nav-item"><a class="nav-link" href="#lokasi-baru">Spotlight</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Fasilitas">Fasilitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#UMKM">Produk UMKM</a></li>
         <li class="nav-item"><a class="nav-link" href="#portfolio">Rute</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
@@ -56,7 +59,7 @@
 <header class="masthead">
   <div class="container d-flex align-items-center flex-column">
      <img class="masthead-avatar mb-5" src="assets/img/portfolio/LOGODS.png" alt="Logo Desa Narawita" />
-    <h1 class="masthead-heading mb-0">Wisata Desa Narawita</h1>
+    <h1 class="masthead-heading mb-0">Sistem Informasi Desa Narawita</h1>
     <p class="masthead-subheading font-weight-light mb-0">Panduan Navigasi dan Lokasi</p>
     <a href="https://www.narawita.desa.id/" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
             <i class="fas fa-map-marker-alt"></i> Kujungin Website resmi desa narawita
@@ -64,9 +67,30 @@
   </div>
 </header>
 
+<style>
+  /* Efek Parallax */
+  .parallax-section {
+   position: relative;
+    background: url('assets/img/portfolio/pedesaan.png') center center / cover no-repeat fixed;
+    padding: 5rem 0;
+  }
+  /* Overlay untuk teks */  
+  .parallax-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(233, 232, 232, 0.75); /* Warna putih transparan */
+    z-index: 1;
+  }
+
+</style>
+
 <!-- Peta -->
-<section class="page-section portfolio" id="peta-desa">
-  <div class="container">
+<section class="page-section parallax-section" id="peta-desa" style="background-image: url('assets/img/portfolio/pedesaan.png');">
+  <div class="container parallax-overlay">
     <div class="text-center mb-5">
       <h2 class="section-heading text-uppercase">Peta Desa</h2>
       <div class="divider-custom">
@@ -83,8 +107,8 @@
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30441.43527349487!2d107.84836152956854!3d-7.025561580071523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c6212df15f03%3A0xbff15518328ea9d8!2sNarawita%2C%20Cicalengka%2C%20Bandung%20Regency%2C%20West%20Java%2C%20Indonesia!5e1!3m2!1sen!2sus!4v1754669338355!5m2!1sen!2sus" 
           width="100%" 
           height="350" 
-          style="border:0; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);" 
-          allowfullscreen="" 
+          style="border:0; border-radius:10px; box-shadow:0 4px 15px #e9e8e8be;" 
+          allowfullscreen 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
@@ -92,7 +116,7 @@
 
       <!-- Deskripsi Desa -->
       <div class="col-lg-6">
-        <h3 class="text-secondary fw-bold mb-3">Desa Narawita</h3>
+        <h3 class="fw-bold mb-3 text-black">Desa Narawita</h3>
         <p style="text-align: justify;">
           Desa Narawita terletak di Kecamatan Cicalengka, Kabupaten Bandung, Jawa Barat. 
           Wilayah ini dikenal dengan suasana pedesaan yang asri dan masyarakat yang ramah. 
@@ -107,144 +131,194 @@
     </div>
   </div>
 </section>
-
-<!-- Spotlight -->
-<style>
-  /* Styling untuk section Spotlight */
-  #lokasi-baru {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-  }
-
-  #lokasi-baru h2 {
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-
-  .spotlight-item {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    padding-bottom: 15px;
-  }
-
-  .spotlight-item img {
-    border-bottom: 1px solid #eee;
-    border-radius: 15px 15px 0 0;
-    transition: transform 0.3s ease;
-  }
-
-  .spotlight-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  .spotlight-item:hover img {
-    transform: scale(1.05);
-  }
-
-  .spotlight-item p {
-    padding: 15px;
-    font-size: 0.95rem;
-    color: #555;
-  }
-
-  .spotlight-btn {
-    margin-top: -5px;
-  }
-</style>
-
+<!-- spotlight -->
 <section class="page-section" id="lokasi-baru">
   <div class="container">
     <h2 class="page-section-heading text-center text-uppercase text-secondary">Spotlight Desa</h2>
     <div class="row mt-4 g-4">
-      <!-- Contoh 1 -->
+      <!-- Spotlight 1 -->
       <div class="col-md-3 col-sm-6">
         <div class="spotlight-item">
           <img class="img-fluid" src="assets/img/portfolio/kangkung2.jpg" alt="Lokasi Baru 1">
           <p>Perkebunan Kangkung di daerah RW10.</p>
-          <a href="https://maps.app.goo.gl/QLkFaGF4umkJ28fB9" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+          <a href="https://maps.app.goo.gl/QLkFaGF4umkJ28fB9" target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo PIn .png" alt="WhatsApp" class="wa-icon">
+          </a>
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo WA .png" alt="WhatsApp" class="wa-icon">
           </a>
         </div>
       </div>
-      <!-- Contoh 1.1 -->
+      <!-- Spotlight 2 -->
       <div class="col-md-3 col-sm-6">
         <div class="spotlight-item">
           <img class="img-fluid" src="assets/img/portfolio/Kolam Renang.jpg" alt="Lokasi Baru 2">
           <p>Kolam Renang adi putra RW.10.</p>
-          <a href="https://goo.gl/maps/abcd1234" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+          <a href="https://goo.gl/maps/abcd1234" target="_blank" target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo PIn .png" alt="WhatsApp" class="wa-icon">
+          </a>
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo WA .png" alt="WhatsApp" class="wa-icon">
           </a>
         </div>
       </div>
-       <!-- Contoh 1.2 -->
+       <!-- spotlight 3 -->
       <div class="col-md-3 col-sm-6">
         <div class="spotlight-item">
           <img class="img-fluid" src="assets/img/portfolio/kolam renang .jpg" alt="Lokasi Baru 2">
           <p>Kolam Renang Bojong RW.09.</p>
-          <a href="https://maps.app.goo.gl/aksnDYWMB5eiMr548" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+          <a href="https://maps.app.goo.gl/aksnDYWMB5eiMr548" target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo PIn .png" alt="WhatsApp" class="wa-icon">
+          </a>
+          </a>
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo WA .png" alt="WhatsApp" class="wa-icon">
           </a>
         </div>
       </div>
-      <!-- Contoh 2 -->
+      <!-- spotlight 4 -->
       <div class="col-md-3 col-sm-6">
         <div class="spotlight-item">
           <img class="img-fluid" src="assets/img/portfolio/Pemancingan .jpg" alt="Lokasi Baru 2">
-          <p>Pemancingan RW.09.</p>
-          <a href="https://maps.app.goo.gl/cWKjE1yHyHfhYGTR7" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+          <p>Kolam Pemancingan RW.09.</p>
+          <a href="https://maps.app.goo.gl/cWKjE1yHyHfhYGTR7" target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo PIn .png" alt="WhatsApp" class="wa-icon">
           </a>
-        </div>
-      </div>
-      <!-- Contoh 3 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spotlight-item">
-          <img class="img-fluid" src="assets/img/portfolio/Lapang Voli .jpg" alt="Lokasi Baru 3">
-          <p>Lapang Voli RW.09.</p>
-          <a href="https://maps.app.goo.gl/WC9AJGJxgswQRfPs7" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
           </a>
-        </div>
-      </div>
-      <!-- Contoh 4 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spotlight-item">
-          <img class="img-fluid" src="assets/img/portfolio/SDN Narawita.jpg" alt="Lokasi Baru 4">
-          <p>SDN I&II Narawita .</p>
-          <a href="https://maps.app.goo.gl/62u8JUzqj8mUrNFP9" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
-          </a>
-        </div>
-      </div>
-      <!-- Contoh 5-->
-      <div class="col-md-3 col-sm-6">
-        <div class="spotlight-item">
-          <img class="img-fluid" src="assets/img/portfolio/kantor Desa .jpg" alt="Lokasi Baru 4">
-          <p>Kantor Desa Narawita .</p>
-          <a href="https://maps.app.goo.gl/62u8JUzqj8mUrNFP9" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
-          </a>
-        </div>
-      </div>
-  <!-- Contoh 5.1 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spotlight-item">
-          <img class="img-fluid" src="assets/img/portfolio/TK.jpg" alt="Lokasi Baru 5">
-          <p>TK Kober Albasriyah RW.03</p>
-          <a href="https://maps.app.goo.gl/z4FKKephF3xmaBZz7" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
-            <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo WA .png" alt="WhatsApp" class="wa-icon">
           </a>
         </div>
       </div>
     </div>
   </div>
 </section>
- <!-- ====== Portfolio Section Gabungan ====== -->
+<!--fasilitas pelayanan Umum-->
+<section class="page-section parallax-section" id="Fasilitas" style="background-image: url('assets/img/portfolio/pedesaan.png');">
+  <div class="container parallax-overlay">
+
+    <h2 class="page-section-heading text-center text-uppercase text-secondary">Fasilistas Pelayanan Umum</h2>
+    <div class="row mt-4 g-4">
+      <!-- pelayanan 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/Lapang Voli .jpg" alt="Lokasi Baru 3">
+          <p>Lapang Voli RW.09.</p>
+          <a href="https://maps.app.goo.gl/WC9AJGJxgswQRfPs7" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Lihat Lokasi
+          </a>
+        </div>
+      </div>
+      <!-- pelayanan 2-->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/SDN Narawita.jpg" alt="Lokasi Baru 4">
+          <p>SDN I&II Narawita .</p>
+          <a href="https://maps.app.goo.gl/62u8JUzqj8mUrNFP9" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Lihat Lokasi
+          </a>
+        </div>
+      </div>
+      <!-- pelayanan 3-->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/kantor Desa .jpg" alt="Lokasi Baru 4">
+          <p>Kantor Desa Narawita .</p>
+          <a href="https://maps.app.goo.gl/62u8JUzqj8mUrNFP9" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Lihat Lokasi
+          </a>
+        </div>
+      </div>
+  <!-- pelayanan 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/TK.jpg" alt="Lokasi Baru 5">
+          <p>TK Kober Albasriyah RW.03</p>
+          <a href="https://maps.app.goo.gl/z4FKKephF3xmaBZz7" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Lihat Lokasi
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Produk UMKM -->
+<section class="page-section" id="UMKM">
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-secondary">Produk UMKM</h2>
+    <div class="row mt-4 g-4">
+      <!-- UMKM 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/kangkung 3.jpg" alt="Lokasi Baru 3">
+          <p>Kangkung Segar</p>
+          <a href="https://shopee.co.id/Kangkung-Fresh-1Ikatan-Sayur-Omstore-i.1520412112.44153670510?sp_atk=408900e1-95b0-4573-a730-f0bf2df44bf1&xptdk=408900e1-95b0-4573-a730-f0bf2df44bf1" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Kunjungi Toko
+          </a>
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo keranjang .png" alt="WhatsApp" class="wa-icon">
+          </a>
+        </div>
+      </div>
+      <!-- UMKM 2-->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/tas .jpg" alt="Lokasi Baru 4">
+          <p>Tas slempang</p>
+          <a href="https://shopee.co.id/Kangkung-Fresh-1Ikatan-Sayur-Omstore-i.1520412112.44153670510?sp_atk=408900e1-95b0-4573-a730-f0bf2df44bf1&xptdk=408900e1-95b0-4573-a730-f0bf2df44bf1" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Kunjungi Toko
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo keranjang .png" alt="WhatsApp" class="wa-icon">
+          </a>
+        </div>
+      </div>
+      <!-- UMKM 3-->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/cepol.jpg" alt="Lokasi Baru 4">
+          <p>cepol</p>
+          <a href="https://shopee.co.id/Kangkung-Fresh-1Ikatan-Sayur-Omstore-i.1520412112.44153670510?sp_atk=408900e1-95b0-4573-a730-f0bf2df44bf1&xptdk=408900e1-95b0-4573-a730-f0bf2df44bf1" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Kunjungi Toko
+         <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo keranjang .png" alt="WhatsApp" class="wa-icon">
+          </a>
+        </div>
+      </div>
+  <!-- UMKM 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item">
+          <img class="img-fluid" src="assets/img/portfolio/mochi 2.jpg" alt="Lokasi Baru 5">
+          <p>mochi</p>
+          <a href="https://shopee.co.id/Kangkung-Fresh-1Ikatan-Sayur-Omstore-i.1520412112.44153670510?sp_atk=408900e1-95b0-4573-a730-f0bf2df44bf1&xptdk=408900e1-95b0-4573-a730-f0bf2df44bf1" target="_blank" class="btn btn-primary btn-sm spotlight-btn">
+            <i class="fas fa-map-marker-alt"></i> Kunjungi Toko
+          <a href="https://wa.me/6282121437995?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda!" 
+            target="_blank" 
+            class="btn btn-whatsapp spotlight-btn">
+           <img src="assets/img/portfolio/logo keranjang .png" alt="WhatsApp" class="wa-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <style>
   /* Parallax background */
   #portfolio {
